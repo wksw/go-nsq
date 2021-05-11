@@ -466,7 +466,7 @@ func (r *Consumer) queryLookupd() {
 retry:
 	endpoint := r.nextLookupdEndpoint()
 
-	r.log(LogLevelInfo, "querying nsqlookupd %s", endpoint)
+	r.log(LogLevelDebug, "querying nsqlookupd %s", endpoint)
 
 	var data lookupResp
 	err := apiRequestNegotiateV1("GET", endpoint, nil, &data)
